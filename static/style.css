@@ -1,0 +1,54 @@
+/* Global Styling */
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+.post-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post-box{
+  
+  padding-left: 10px;
+  width: 80%;
+  height: 10%;
+  text-align: center;
+}
+
+.post-box h1{
+  font-size: x-large;
+}
+
+.post-box p{
+  text-align: left;
+  font-size: large;
+
+}
+
+.post-box img{
+  height: 100%;
+  width: 100%;
+}
+
+.navbar {
+  background-color: blueviolet;
+  padding-top: 200px;
+  text-align: center;
+  z-index: -1;
+}
+
+.link {
+  font-size:50px;
+  background-color: blueviolet;
+  margin-left: 200px;
+  
+  
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}

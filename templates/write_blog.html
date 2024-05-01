@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">   
+
+    {% include 'header.html' %}
+    
+    <body>
+
+        {% include 'menu.html'%}   
+
+        <div class = "contents">
+            <form method = "POST" action = '/newpost' enctype="multipart/form-data">
+                <div class = "blog postblog-page">
+                    <input type = "text" class = "blog-name" name = "blogname" placeholder="Indtast navn på blog..." required = "true">
+                    <textarea class = "blog-text" name = "blogtext" placeholder="Indtast teksten til din blog..." required = "true"></textarea>
+                    <input type = "file" name = "blogimage" required = "false">
+                </div>
+                <input class="button" type="submit" value="Opret">
+            </form>
+            
+               
+            
+        </div>        
+    </body>
+
+</html>
