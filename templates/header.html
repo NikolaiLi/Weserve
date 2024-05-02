@@ -6,5 +6,12 @@
     <title>Hej</title>
     
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    
+
 </head>
+<body>
+    <div class="navbar">
+        {% for key, value in menu.items() %}
+            <a href="{{value}}">{{key}}</a>
+        {% endfor %}
+   </div>
+</body>

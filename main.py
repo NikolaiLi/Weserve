@@ -9,7 +9,7 @@ app.static("/static", "./static")
 jinja = SanicJinja2(app)
 
 globals ={ 
-           "menu": {"Frontpage":"/", "Write blog":"/write_blog"}
+           "menu": {"Frontpage":"/", "Write blog":"/write_blog", "book bane":"/book_bane"}
          }
 
 @app.get("/")
