@@ -3,15 +3,20 @@
 
 <head>
 
-    <title>Hej</title>
+    <title>Weserve</title>
     
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
 </head>
 <body>
     <div class="navbar">
-        {% for key, value in menu.items() %}
-            <a href="{{value}}">{{key}}</a>
-        {% endfor %}
+        <div class="navbar-right">
+            <a href="/">
+                <img src="https://cdn.discordapp.com/attachments/735222555304001657/1235484298560405634/image.png?ex=663489ea&is=6633386a&hm=5ebdf061bb999a9cf2a108d9ef5ef3b20dc59668e809ef5f630b04caa52c23d9&">
+            </a>
+        <div class="navbar-right">
+            {% for key, value in menu.items() %}
+                <a href="{{value}}">{{key}}</a>
+            {% endfor %}
    </div>
 </body>
