@@ -1,0 +1,13 @@
+.navbar > *{
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  margin: 0px;
+}
+
+.navbar img {
+  width: 240px;
+  height: 80px;
+}

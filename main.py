@@ -9,7 +9,7 @@ app.static("/static", "./static")
 jinja = SanicJinja2(app)
 
 globals ={ 
-           "menu": {"Write blog":"/write_blog", "Book":"/book"}
+           "menu": {"Book":"/book", "Bliv Medlem":"/logind"}
          }
 
 @app.get("/")
@@ -17,16 +17,16 @@ globals ={
 async def home(request):
     return globals
 
-@app.get("/write_blog")
-@jinja.template("write_blog.html")
-async def write_blog(request):
+@app.get("/book")
+@jinja.template("book.html")
+async def book(request):
     return globals
 
-@app.post("/newpost")
-async def new_post(request):
-    title = request.form.get('blogname')
-    
-    return redirect(f"/write_blog")
+@app.get("/logind")
+@jinja.template("logind.html")
+async def logind(request):
+    return globals
+
 
 if __name__ == "__main__":
     app.run(host="localhost", port=8080)
