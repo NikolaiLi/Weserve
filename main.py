@@ -1,7 +1,5 @@
 from sanic import Sanic
-from sanic.response import redirect 
 from sanic_jinja2 import SanicJinja2
-from model.post import Post
 
 app = Sanic("Try")
 app.static("/static", "./static")
