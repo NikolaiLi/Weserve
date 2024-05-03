@@ -6,7 +6,7 @@ app.static("/static", "./static")
 jinja = SanicJinja2(app)
 
 globals ={ 
-           "menu": {"Book":"/book", "Bliv_medlem":{},"login":"/logind",}
+           "menu": {"Book":"/book","Bliv Medlem":"/logind",}
          }
 
 @app.get("/")
