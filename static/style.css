@@ -1,13 +1,33 @@
-.navbar > *{
-  display: flex;
+
+.navbar 
+{
+  padding: 20px;
+  text-decoration: none;
   align-items: center;
+  display: flex;
+  text-transform: uppercase;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: large;
+  justify-content: space-between;
 }
 
-.navbar {
+.navbar * 
+{
+  text-decoration: none;
+  font-weight: 600;
+  color: green;
+}
+
+.navbar-right > *
+{
+  padding: 40px;
+}
+
+.navbar img 
+{
+  width: 280px;
+  height: 90px;
   margin: 0px;
 }
 
-.navbar img {
-  width: 240px;
-  height: 80px;
-}
+
