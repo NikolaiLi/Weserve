@@ -4,17 +4,19 @@
 {% include 'header.html' %}
 
 <body>
-    <h2>Her kan du logge ind på din konto</h2>
-
         <div class = "logind-box">
+            <h2>LOG PÅ DIN KONTO</h2>
             <form method = "POST" action = '/logind' enctype="multipart/form-data">
-                <div class = "blog postblog-page">
-                    <input type = "title" class = "blog-name" name = "Brugernavn" placeholder="Brugernavn" required = "True">
-                    <input type = "password" class = "blog-name" name = "Adgangskode" placeholder="Adgangskode" required = "True">
+                <div class = "logindbox">
+                    <input type = "title" class = "logindbruger" name = "Brugernavn" placeholder="Brugernavn" required = "True">
+                    <input type = "password" class = "logindpass" name = "Adgangskode" placeholder="Adgangskode" required = "True">
                 </div>                                
             <input class="button" type="submit" value="Log ind"> 
         
-            <div class="signup_box">
+            <div class="blivmedlem">
+                <div class="signuptext">
+                    <div>Har du ikke en konto?<div>
+                </div>
                 <a href="/Bliv_medlem">
                     <div>Bliv medlem<div>
                     </a>
