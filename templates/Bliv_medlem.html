@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'header.html' %}
+
+<body>
+    <h2> Opret en konto</h2>
+
+        <div class = "signup-box">
+            <form method = "POST" action = '/bliv_medlem' enctype="multipart/form-data">
+                <div class = "blog postblog-page">
+                    <input type = "title" class = "blog-name" name = "Brugernavn" placeholder="Brugernavn" required = "True">
+                    <input type = "title" class = "blog-name" name = "Gmail" placeholder="Gmail" required = "True">
+                    <input type = "password" class = "blog-name" name = "Adgangskode" placeholder="Adgangskode" required = "True">
+                </div>                                
+            <input class="button" type="submit" value="Bliv medlem">
+
+        </form>
+
+</body>    
+
+</html>
