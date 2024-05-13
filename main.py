@@ -7,9 +7,10 @@ app = Sanic("Try")
 app.static("/static", "./static")
 jinja = SanicJinja2(app)
 
+Bliv_medlem = []
+
 globals ={ 
            "menu": {"Book":"/book", "Bliv Medlem":"/logind"},
-           "Bliv_medlem" : {},
            "baner": ["Tennis","Badminton","Volleyball"],
            "valgt_sport" : ""
 }
