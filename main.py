@@ -7,15 +7,22 @@ app = Sanic("Try")
 app.static("/static", "./static")
 jinja = SanicJinja2(app)
 
-
+<<<<<<< Updated upstream
 baner = ["Tennis","Badminton","Volleyball"]
 
-globals = { 
-
+globals ={ 
+<<<<<<< Updated upstream
+           "menu": {"Book":"/book","Bliv Medlem":"/logind",}
+=======
            "menu": {"Book":"/book", "Bliv Medlem":"/logind"},
-}
+>>>>>>> Stashed changes
+=======
 Bliv_Medlem = []
 
+globals ={ 
+           "menu": {"Book":"/book","Bliv Medlem":"/logind"}
+>>>>>>> Stashed changes
+         }
 
 @app.get("/")
 @jinja.template("index.html")
