@@ -11,8 +11,8 @@ Bliv_medlem = []
 
 globals ={ 
            "menu": {"Book":"/book", "Bliv Medlem":"/logind"},
-           "baner": ["Tennis","Badminton","Volleyball"],
-           "valgt_sport" : ""
+           "Sport": ["Tennis","Badminton","Volleyball"],
+           "valgt_sport": None
 }
 @app.get("/")
 @jinja.template("index.html")
@@ -22,8 +22,8 @@ async def home(request):
 
 @app.get("/Sport/<sport_valg>")
 @jinja.template("Sport.html")
-async def volley(request, sport_valg : str):
-    for sport in globals["baner"]:
+async def sport(request, sport_valg: str):
+    for sport in globals["Sport"]:
         if sport_valg == sport:
             globals["valgt_sport"] = sport_valg
         else:
