@@ -8,11 +8,7 @@ jinja = SanicJinja2(app)
 baner = ["Tennis","Badminton","Volleyball"]
 
 globals ={ 
-<<<<<<< Updated upstream
-           "menu": {"Book":"/book","Bliv Medlem":"/logind",}
-=======
            "menu": {"Book":"/book", "Bliv Medlem":"/logind"},
->>>>>>> Stashed changes
          }
 
 @app.get("/")
