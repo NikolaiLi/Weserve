@@ -7,17 +7,26 @@ app = Sanic("Try")
 app.static("/static", "./static")
 jinja = SanicJinja2(app)
 
-Bliv_medlem = []
-
 globals ={ 
-           "menu": {"Book":"/book", "login":"/logind"},
+           "menu": {"Book":"/book", "Bliv Medlem":"/logind"},
            "Bliv_medlem" : {},
-           "baner" : ["Tennis","Badminton","Volleyball"]
-         }
-
+           "baner": ["Tennis","Badminton","Volleyball"],
+           "valgt_sport" : ""
+}
 @app.get("/")
 @jinja.template("index.html")
 async def home(request):
+    return globals
+
+
+@app.get("/Sport/<sport_valg>")
+@jinja.template("Sport.html")
+async def volley(request, sport_valg : str):
+    for sport in globals["baner"]:
+        if sport_valg == sport:
+            globals["valgt_sport"] = sport_valg
+        else:
+            print("ikke en rigtig sport")
     return globals
 
 @app.get("/book")
