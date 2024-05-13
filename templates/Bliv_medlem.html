@@ -4,17 +4,17 @@
 {% include 'header.html' %}
 
 <body>
-    <h2> Opret en konto</h2>
 
         <div class = "signup-box">
+            <h1> OPRET EN KONTO</h1>
             <form method = "POST" action = '/Bliv_medlem' enctype="multipart/form-data">
-                <div class = "blog postblog-page">
-                    <input type = "title" class = "blog-name" name = "Brugernavn" placeholder="Brugernavn" required = "True">
-                    <input type = "password" class = "blog-name" name = "Adgangskode" placeholder="Adgangskode" required = "True">
+                <div class = "signup">
+                    <input type = "title" class = "signbrugernavnbox" name = "Brugernavn" placeholder="Brugernavn" required = "True">
+                    <input type = "password" class = "signadgangskodebox" name = "Adgangskode" placeholder="Adgangskode" required = "True">
                 </div>                                
-            <input class="button" type="submit" value="Opret konto">
-
-        </form>
+            <input class="button" type="submit" value="OPRET">
+        </div>
+            </form>
 
 </body>    
 

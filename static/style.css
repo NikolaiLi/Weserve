@@ -68,3 +68,25 @@
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
+.signup-box
+{
+  place-content: center;
+  margin-top: 100px;
+  border: 3px solid green;
+  margin-left: 500px;
+  margin-right: 500px;
+}
+
+.signup-box *
+{
+  text-align: center;
+  margin: 5px;
+  color: green;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: medium;
+}
+
+.signup
+{
+  display: block;
+}
