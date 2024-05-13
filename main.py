@@ -31,22 +31,32 @@ async def logind(request):
     return globals
 
 @app.get("/Bliv_medlem", name = "medlem-page")
-@jinja.template("signup.html")
-async def Bliv_medlem(request):
+@jinja.template("Bliv_medlem.html")
+async def bliv_medlem(request):
     return globals
 
+@app.post("/logind")
+async def login(request):
+    brugernavn = request.form.get("Brugernavn")
+    adgangskode = request.form.get("Adgangskode")
+    
+    match = next((user for user in Bliv_medlem if user ["Bliv_medlem_brugernavn"] == brugernavn), None)
+    
+    if match and match["Bliv_medlem_adgangskode"] == adgangskode:
+        redirect_obj = redirect("/")
+        return redirect_obj
+    else:
+        return redirect("/Bliv_medlem")
+
 @app.post("/Bliv_medlem")
-async def Bliv_medlem(request):
+async def bliv_medlem(request):
     Bliv_medlem_brugernavn = request.form.get("Brugernavn")
-    Bliv_medlem_gmail = request.form.get("Gmail")
     Bliv_medlem_adgangskode = request.form.get("Adgangskode")
     id = str(uuid.uuid4())
 
-    Bliv_medlem_entry = {"id": id, "Bliv_medlem_brugernavn": Bliv_medlem_brugernavn, "Bliv_medlem_gmail": Bliv_medlem_gmail, "Bliv_medlem_adgangskode": Bliv_medlem_adgangskode}
+    Bliv_medlem_entry = {"id": id, "Bliv_medlem_brugernavn": Bliv_medlem_brugernavn, "Bliv_medlem_adgangskode": Bliv_medlem_adgangskode}
     Bliv_medlem.append(Bliv_medlem_entry)
     return redirect("/logind")
-
-
 
 if __name__ == "__main__":
     app.run(host="localhost", port=8080)
