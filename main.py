@@ -9,16 +9,25 @@ jinja = SanicJinja2(app)
 
 Bliv_medlem = []
 
-globals ={ 
+
+
+
+globals = { 
            "menu": {"Book":"/book", "Bliv Medlem":"/logind"},
            "Sport": ["Tennis","Badminton","Volleyball"],
-           "valgt_sport": None
+           "valgt_sport": None,
+           "ugedage": ["ma","ti","on","to","fr","lø","sø"],
+           "dage": []
+           
 }
+
+for i in range(1,32):
+    globals["dage"].append(i)
+
 @app.get("/")
 @jinja.template("index.html")
 async def home(request):
     return globals
-
 
 @app.get("/Sport/<sport_valg>")
 @jinja.template("Sport.html")

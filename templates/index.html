@@ -4,6 +4,25 @@
                 
         {% include 'menu.html'%}          
         
-    </body>
+    
+    <div class="month">
+        <ul>
+          <li class="prev">&#10094;</li>
+          <li class="next">&#10095;</li>
+          <li>August<br><span style="font-size:18px">2021</span></li>
+        </ul>
+      </div>
+      
+      <ul class="weekdays">
+        {% for udag in ugedage %}
+            <li>{{ udag }}</li>
+        {% endfor %}
+      </ul>
+      <div class="days">
+        {% for udag in dage %}
+            <button class="number">{{ udag }}</button>
+        {% endfor %}
+      </div>
 
+    </body>
 </html>
