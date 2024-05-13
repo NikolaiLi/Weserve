@@ -2,13 +2,17 @@
 
 <html>
     <body>
-        <p>Her kan du booke</p>
-
-        {% for bane in baner %}
-
-        <li>{{bane.text}}</li>
+        <h1>Her kan du booke</h1>
+     
         
-        {% endfor %}
+    
+    <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+            {% for bane in baner %}
+            <a href="#">{{ bane }}</a>
+            {% endfor %}
+        </div>
+      </div>
     </body>
-
 </html>
