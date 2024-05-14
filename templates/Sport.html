@@ -2,8 +2,29 @@
 
 <html>
 
-    <h1>Her kan du booke {% valgt_sport %}</h1>
-
+    <body>
+    <h1>Her kan du booke {{ valgt_sport }}</h1>
+    <div class="month">
+        <ul>
+          <li class="prev">&#10094;</li>
+          <li class="next">&#10095;</li>
+          <li>Maj<br><span style="font-size:18px">2024</span></li>
+        </ul>
+      </div>
+      
+      <ul class="weekdays">
+        {% for udag in ugedage %}
+            <li>{{ udag }}</li>
+        {% endfor %}
+      </ul>
+      <div class="days">
+        <a href="/">
+            {% for udag in dage %}
+               <button class="number">{{ udag }}</button>
+            {% endfor %}
+        </a>
+      </div>
+    </body>
 
     
 </html>

@@ -129,7 +129,7 @@ body {font-family: Verdana, sans-serif;}
 /* Month header */
 .month {
   padding: 70px 25px;
-  width: 100%;
+  width: 96,5%;
   background: #1abc9c;
   text-align: center;
 }
@@ -174,7 +174,7 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* Days (1-31) */
-.number  {
+.number {
   padding: 10px 0;
   background: #eee;
   margin: 0;
@@ -193,7 +193,7 @@ body {font-family: Verdana, sans-serif;}
   color: #000000;
 }
 
-.days:hover .number {background-color: #666;}
+.days button:hover {background-color: #666;}
 
 .wrong *
 {
