@@ -5,9 +5,9 @@
         <div class="bookoverskrift">
         <h1>VÆLG OG BOOK</h1>
         </div>
-    {% if current_user == None %}
+    {% if current_user == None or current_user == False %}
         <div>OPRET EN KONTO FOR BOOKING</div>
-    {% elif current_user != None %}
+    {% else %}
         <div class="dropdown">
             <button class="dropbtn">Sport</button>
                 <div class="dropdown-content">
