@@ -3,11 +3,14 @@
     <body>
           
         {% include 'menu.html'%}     
-
+        <div class="bookoverskrift">
+            <h1>DINE RESERVERINGER</h1>
+        
       <ul>
         {% for book in booked%}
           <p>Du har en booking d. {{ book.booking }} til {{ book.sport }}</p>
         {% endfor %}
       </ul>
+        </div>
     </body>
 </html>
