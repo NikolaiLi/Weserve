@@ -5,15 +5,19 @@
         <div class="bookoverskrift">
         <h1>VÆLG OG BOOK</h1>
         </div>
-    
-    <div class="dropdown">
-        <button class="dropbtn">Sport</button>
-        <div class="dropdown-content">
-            {% for sport in Sport %}
-            <a href="/Sport/{{ sport }}">{{ sport }}</a>
-            {% endfor %}
+    {% if current_user == None %}
+        <div>OPRET EN KONTO FOR BOOKING</div>
+    {% elif current_user != None %}
+        <div class="dropdown">
+            <button class="dropbtn">Sport</button>
+                <div class="dropdown-content">
+                    {% for sport in Sport %}
+                    <a href="/Sport/{{ sport }}">{{ sport }}</a>
+                    {% endfor %}
+    {% endif %}
+            </div>
         </div>
-      </div>
+      
     </body>
 
 </html>
