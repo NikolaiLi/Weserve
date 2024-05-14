@@ -78,7 +78,7 @@ async def login(request):
         redirect_obj = redirect("/")
         return redirect_obj
     else:
-        globals["current_user"] = "False"
+        globals["current_user"] = False
         return redirect("/logind")
 
 @app.post("/Bliv_medlem")
