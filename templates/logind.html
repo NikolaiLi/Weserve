@@ -7,11 +7,13 @@
         <div class = "logind-box">
             <h2>LOG PÅ DIN KONTO</h2>
             <form method = "POST" action = '/logind' enctype="multipart/form-data">
+
                 <div class = "logindbox">
                     <input type = "title" class = "logindbruger" name = "Brugernavn" placeholder="Brugernavn" required = "True">
                     <input type = "password" class = "logindpass" name = "Adgangskode" placeholder="Adgangskode" required = "True">
                 </div>                                
             <input class="button" type="submit" value="Log ind">
+
             <div class="wrong">
             {% if current_user == False %}
                 <p>Forkert brugernavn eller adgangskode</p>
@@ -26,9 +28,8 @@
                     <div>Bliv medlem<div>
                     </a>
             </div>
-
         </form>
-
+    </div>
 </body>    
 
 </html>

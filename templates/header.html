@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <div class="navbar" bgcolor="FFFFFF">
+    <div class="navbar">
         <div class="navbar-left">
             <a href="/">
                 <img src="https://cdn.discordapp.com/attachments/735222555304001657/1235484298560405634/image.png?ex=664261aa&is=6641102a&hm=cda241fcff76287b49753245c0d41966b1936c6649e2db5e54d7fe6955ca7acb&">
@@ -19,6 +19,10 @@
             {% for key, value in menu.items() %}
                 <a href="{{value}}">{{key}}</a>
             {% endfor %}
+            {% if current_user %}
+            <a href="/logaf/{{ current_user }}">LOG AF ({{ current_user }})</a>
+            {% endif %}
+
         </div>
    </div>
 </body>
