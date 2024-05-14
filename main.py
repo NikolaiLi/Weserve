@@ -64,6 +64,8 @@ async def login(request):
     
     if match and match["Bliv_medlem_adgangskode"] == adgangskode:
         globals["current_user"] = brugernavn
+        globals["menu"].pop("Bliv Medlem")
+        globals["menu"]["log af: " + brugernavn] = "/logind"
         redirect_obj = redirect("/")
         return redirect_obj
     else:
