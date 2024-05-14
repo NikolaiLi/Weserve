@@ -177,28 +177,6 @@ body {font-family: Verdana, sans-serif;}
   text-align: center;
 }
 
-/* Days (1-31) */
-.number {
-  padding: 10px 0;
-  background: #eee;
-  margin: 0;
-}
-
-.days button {
-  background-color: #eee;
-  border: none;
-  list-style-type: none;
-  display: inline-block;
-  height: 30px;
-  width: 13.6%;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size:12px;
-  color: #000000;
-}
-
-.days button:hover {background-color: #666;}
-
 .wrong *
 {
   color: red;
