@@ -11,8 +11,13 @@
                     <input type = "title" class = "logindbruger" name = "Brugernavn" placeholder="Brugernavn" required = "True">
                     <input type = "password" class = "logindpass" name = "Adgangskode" placeholder="Adgangskode" required = "True">
                 </div>                                
-            <input class="button" type="submit" value="Log ind"> 
-        
+            <input class="button" type="submit" value="Log ind">
+            <div class="wrong">
+            {% if current_user == "False" %}
+                <p>Forkert brugernavn eller adgangskode</p>
+            {% endif %}
+            </div>
+
             <div class="blivmedlem">
                 <div class="signuptext">
                     <div>Har du ikke en konto?<div>

@@ -16,6 +16,7 @@ globals = {
            "menu": {"Book":"/book", "Bliv Medlem":"/logind"},
            "Sport": ["Tennis","Badminton","Volleyball"],
            "valgt_sport": None,
+           "current_user": None,
            "ugedage": ["ma","ti","on","to","fr","lø","sø"],
            "dage": []
            
@@ -62,10 +63,12 @@ async def login(request):
     match = next((user for user in Bliv_medlem if user ["Bliv_medlem_brugernavn"] == brugernavn), None)
     
     if match and match["Bliv_medlem_adgangskode"] == adgangskode:
+        globals["current_user"] = brugernavn
         redirect_obj = redirect("/")
         return redirect_obj
     else:
-        return redirect("/Bliv_medlem")
+        globals["current_user"] = "False"
+        return redirect("/logind")
 
 @app.post("/Bliv_medlem")
 async def bliv_medlem(request):

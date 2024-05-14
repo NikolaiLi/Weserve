@@ -194,3 +194,8 @@ body {font-family: Verdana, sans-serif;}
 }
 
 .days:hover .number {background-color: #666;}
+
+.wrong *
+{
+  color: red;
+}
