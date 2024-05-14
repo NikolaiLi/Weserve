@@ -17,14 +17,17 @@
             <li>{{ udag }}</li>
         {% endfor %}
       </ul>
-      <div class="days">
-        <a href="/">
-            {% for udag in dage %}
-               <button class="number">{{ udag }}</button>
-            {% endfor %}
-        </a>
-      </div>
+          
+    <div class = "days">
+        <form method = "POST" action = '/valgt' enctype="multipart/form-data">
+            <div>
+                {% for udag in dage %}
+                    <input type = "radio" id = "vlgt" name = "vlgt" value = {{udag}}>
+                    <label for="vlgt">{{ udag }}</label><br>
+                {% endfor %}
+            </div>
+            <input class="button" type="submit" value="Book">
+        </form>
+    </div>        
     </body>
-
-    
 </html>

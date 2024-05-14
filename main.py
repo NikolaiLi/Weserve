@@ -10,7 +10,7 @@ jinja = SanicJinja2(app)
 Bliv_medlem = []
 
 
-
+booke = []
 
 globals = { 
            "menu": {"Book":"/book", "Bliv Medlem":"/logind"},
@@ -18,7 +18,8 @@ globals = {
            "valgt_sport": None,
            "current_user": None,
            "ugedage": ["ma","ti","on","to","fr","lø","sø"],
-           "dage": []
+           "dage": [],
+           "booked": booke
            
 }
 
@@ -54,6 +55,14 @@ async def logind(request):
 @jinja.template("Bliv_medlem.html")
 async def bliv_medlem(request):
     return globals
+
+@app.post("/valgt")
+async def valgt_dato(request):
+    booking = request.form.get("vlgt")
+    Andreas = {"booking": booking, "sport": globals["valgt_sport"]}
+    booke.append(Andreas)
+    print(globals["booked"])
+    return redirect("/")
 
 @app.post("/logind")
 async def login(request):
